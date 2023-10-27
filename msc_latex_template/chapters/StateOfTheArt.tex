@@ -1,0 +1,43 @@
+\chapter{State of the Art}
+
+This chapter will explore the different relevant concepts and technologies related to the project. It will follow a bottom-up approach, focusing first on the essential aspects, such as \gls{sip}, \gls{voip}, \gls{saas}, to the broadest ones, such as \gls{uc}, available solutions, and integration techniques available with \gls{mst}.
+
+\section{Session Initiation Protocol (SIP)}
+
+The \gls{sip} in an application-layer control signaling protocol with the prime objective to create, modify, and terminate sessions with various participants involving data exchange among them \citep{rfc3261}, it can run over multiple \gls{ietf} protocols such as the \gls{rtp} and \gls{sdp}.
+
+This protocol's need arises from creating and handling application sessions while managing different user behaviors and practices, such as location, devices, and identification. It was created with a specific vision of the future where all phone calls, meetings, and conferences could take place over the Internet, in which people could be identified via their email addresses or by their names instead of their phone numbers. With that in mind, anyone could reach a person, regardless of device or \gls{ip}.
+
+To fully understand the functionality of the \gls{sip}, it is important to overview its main processes:
+
+\begin{itemize}
+
+   \item \textbf{User location:} finds the current location of a given user; given this, users can also access application services from any location;
+
+   \item \textbf{User availability :} appoint if users are willing to communicate;
+
+   \item \textbf{User capabilities:} decides what media and associated parameters to use during a session with another user;
+
+   \item \textbf{Session setup:} sets the rules for how two or more people can communicate with each other in a virtual meeting or call;
+
+   \item \textbf{Session management:} involves managing a particular meeting or appointment, such as transferring it, terminating it, modifying its parameters, and calling services.
+   
+\end{itemize}
+
+With these functionalities at hand, \gls{sip} users can know when someone wants to contact them, agree on the media type and encoding to be used, and end calls. They also can determine the \gls{ip} address of the callee and manage the call as they please, changing encoding mid-call, adding new media streams, inviting other participants, or transferring and holding calls. It is no wonder that \gls{sip} is a go-to choice for various applications and services, from \gls{voip} systems to enterprise communication systems. It is also famous for communication devices and software, including \gls{ip} phones, softphones, and instant messaging clients.
+
+The format of a \gls{sip} \gls{uri} is similar to an email, which will be explored further in an upcoming figure. The design is modeled after the \gls{http} requests and responses and shares many of the same encoding rules, fields, and status codes. It also borrows concepts of recursive and iterative \gls{dns} searches while integrating the \gls{sdp}, defining the session contents \citep{kurose2017}.
+
+\subsection{SIP Architecture}
+
+The \gls{sip} architecture comprises various entities working together to establish, modify, and terminate communication sessions. The system's core is based on the client-server model, which manages the sending and receiving responses across different devices.
+
+On the client side, which is responsible for sending and receiving responses, we can identify two components: the \glspl{uac}, with the central role of issuing requests, and the \textbf{proxy server}, which can function as a client and a server. On the server side, which is responsible for receiving requests and sending back responses, we can find the \glspl{uas}, with the function of receiving requests and responding, the \textbf{redirect servers}, the \textbf{registers}, and the \textbf{proxy server}. Furthermore, it is essential to note that in every \gls{sip} end-station/terminal; there always exists one \textbf{User Agent}, be it a \gls{uac} or a \gls{uas}.
+
+
+
+
+
+
+\section{Summary}
+

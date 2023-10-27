@@ -1,0 +1,144 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{dissertation}
+\makeglossaries
+\makeindex
+
+%\logo{EAAD}{School of Architecture, Art and Design}{}
+%\logoB{EAAD}{School of Architecture, Art and Design}{}
+
+%\logo{EC}{School of Sciences}{}
+%\logoB{EC}{School of Sciences}{}
+
+%\logo{ED}{Law School}{}
+%\logoB{ED}{Law School}{}
+
+\logo{EE}{School of Engineering}{}
+\logoB{EE}{School of Engineering}{}
+
+%\logo{EEG}{School of Economics and Management}{}
+%\logoB{EEG}{School of Economics and Management}{}
+
+%\logo{ELACH}{School of Letters, Arts and Human Sciences}{}
+%\logoB{ELACH}{School of Letters, Arts and Human Sciences}{}
+
+%\logo{EM}{Medical school}{}
+%\logoB{EM}{Medical school}{}
+
+%\logo{EP}{School of Psychology}{}
+%\logoB{EP}{School of Psychology}{}
+
+%\logo{ESE}{Higher School of Nursing}{}
+%\logoB{ESE}{Higher School of Nursing}{}
+
+%\logo{I3Bs}{Research Institute on Biomaterials,}{Biodegradables and Biomimetics}
+%\logoB{I3Bs}{Research Institute on Biomaterials,}{Biodegradables and Biomimetics}
+
+%\logo{ICS}{Institute of Social Sciences}{}
+%\logoB{ICS}{Institute of Social Sciences}{}
+
+%\logo{IE}{Institute of Education}{}
+%\logoB{IE}{Institute of Education}{}
+
+\author{Vasco Mota de Oliveira}
+
+\titleA{ABC Unified Communications}
+\titleB{integration with Microsoft
+Teams}
+%\titleC{}
+
+\masters{Master’s in Informatics Engineering}
+%\area{Area of specialization}
+\supervisor{José Ribeiro}
+\cosupervisor{Maria Solange Pires Ferreira Rito Lima}
+
+\begin{document}
+\setlength{\parindent}{0em}
+
+%-- Covers
+\input{covers/Covers}
+
+%-- Document setup
+\newgeometry{right=25mm, left=25mm, top=25mm, bottom=25mm}
+\pagenumbering{roman}
+
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{1.5em}
+
+%-- Preamble
+\input{preamble/Copyright}
+\input{preamble/Acknowledgements}
+\input{preamble/StatementofIntegrity}
+\input{preamble/Abstract}
+
+\phantomsection
+\tableofcontents
+
+\cleardoublepage
+\listoffigures
+
+% List of tables
+\renewcommand*{\listtablename}{List of Tables}
+\listoftables
+\clearpage
+
+\newacronym{abc}{ABC}{Advanced Business Communication}
+\newacronym{voip}{VoIP}{Voice over IP}
+\newacronym{uc}{UC}{Unified Communication}
+\newacronym{ucc}{UC\&C}{Unified Communication and Collaboration}
+\newacronym{alt}{ALT}{Altice Lab}
+\newacronym{sip}{SIP}{Session Initiation Protocol}
+\newacronym{mst}{MS Teams}{Microsoft Teams}
+\newacronym{rest}{REST}{Representational State Transfer}
+\newacronym{saas}{SaaS}{Software as a Service}
+\newacronym{api}{API}{Application Programming Interface}
+\newacronym{ip}{IP}{Internet Protocol}
+\newacronym{uri}{URI}{Uniform Resource Identifier}
+\newacronym{http}{HTTP}{Hypertext Transfer Protocol}
+\newacronym{dns}{DNS}{Domain Name Server}
+\newacronym{sdp}{SDP}{Session Description Protocol}
+\newacronym{ietf}{IETF}{Internet Engineering Task Force}
+\newacronym{rtp}{RTP}{Real-time Transport Protocol}
+\newacronym{uac}{UAC}{User Agent Client}
+\newacronym{uas}{UAS}{User Agent Server}
+
+
+% Acronyms
+\printglossary[type=\acronymtype,nonumberlist, title={Acronyms}]
+
+% Glossary
+\printglossary[title={Glossary}, nonumberlist]
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+%-- Dissertation 
+\part{Introductory material}
+
+\input{chapters/Introduction}
+\input{chapters/StateOfTheArt}
+\input{chapters/ProblemAndChallenges}
+
+\part{Core of the Dissertation}
+
+\input{chapters/Development}
+\input{chapters/TestingAndAnalysis}
+\input{chapters/ConclusionsAndFutureWork}
+
+\renewcommand{\baselinestretch}{1}
+\bibliographystyle{plainnat}
+\bibliography{dissertation}
+\printindex
+
+\appendix
+\renewcommand\chaptername{Appendix}
+
+\part{Appendices}
+
+\input{appendices/SupportWork}
+\input{appendices/DetailsOfResults}
+\input{appendices/Listings}
+\input{appendices/Tooling}
+
+\input{covers/BackCover}
+
+\end{document}
